@@ -1,9 +1,12 @@
-import { Redirect } from 'expo-router'
 import React from 'react'
-import { Dimensions, StyleSheet } from 'react-native'
+import { Dimensions, ImageBackground, StyleSheet, Text, View } from 'react-native'
+import backImage from '../../../assets/images/background.jpg'
 const Index = () => {
   return (
-  <Redirect href="/(auth)/Welcome" />
+    <View style={styles.container}>
+      <ImageBackground source={backImage} style={styles.background} />
+      <Text style={{color:'red'}}>Indexdsadsa</Text>
+    </View>
   )
 }
 
