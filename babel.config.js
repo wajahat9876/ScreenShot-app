@@ -9,6 +9,7 @@ module.exports = api => {
       },
     },
     plugins: [
+    
       [
         'module-resolver',
         {
@@ -35,9 +36,9 @@ module.exports = api => {
           extensions: ['.js', '.jsx', '.es', '.es6', '.mjs', '.ts', '.tsx'],
         },
       ],
-      'nativewind/babel',
+      // 'nativewind/babel',
       'react-native-reanimated/plugin',
-      'expo-router/babel'
+      // 'expo-router/babel'
     ],
   };
 };
