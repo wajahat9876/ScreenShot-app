@@ -1,7 +1,13 @@
+import { selectUser } from '@store/selectors/userSelects'
 import { Redirect } from 'expo-router'
 import React from 'react'
 import { Dimensions, StyleSheet } from 'react-native'
+import { useSelector } from 'react-redux'
 const Index = () => {
+ const {isWelcome}=useSelector(selectUser);
+ if(isWelcome){
+  return (<Redirect href="/(main)/Home" />)
+ }
   return (
   <Redirect href="/(auth)/Welcome" />
   )
