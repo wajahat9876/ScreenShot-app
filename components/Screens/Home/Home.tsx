@@ -67,7 +67,7 @@ const Home = ({ goTo }: MultiStepFormProps) => {
           onPress={() => {
             goTo && goTo(1)
           }}
-          title="Chat"
+          title="Video"
         />
       </View>
     </MotiView>
@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
     position: 'absolute',
     bottom: 0,
-    top: 10,
+    top: 130,
     left: 0,
   },
 })

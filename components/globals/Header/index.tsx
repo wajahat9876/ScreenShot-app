@@ -1,14 +1,15 @@
 import { getRespValue } from '@utils/design/design'
 import { MultiStepFormProps } from 'hooks/useMultiStepForm'
-import React from 'react'
+import React, { memo } from 'react'
 import { StatusBar, Text, View } from 'react-native'
 
 interface props extends MultiStepFormProps {
   title: string
   onPress?: () => void
+  children?: React.ReactNode
 }
-const Header = (props: props) => {
-  const { title, onPress } = props
+const Header: React.FC<props> = ({ title, children }) => {
+  // const { title, onPress } = props
   return (
     <View
       style={{
@@ -31,8 +32,9 @@ const Header = (props: props) => {
       >
         {title}
       </Text>
+      {children}
     </View>
   )
 }
 
-export default Header
+export default memo(Header)
